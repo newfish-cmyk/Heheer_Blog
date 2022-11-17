@@ -3,17 +3,11 @@ import Link from "next/link";
 import axios from 'axios'
 
 import Header from "../components/Header";
+import servicePath from "../config/apiUrl";
 
 const Blog = (list) => {
 
     const [myList, setMyList] = useState(list.data)
-    // const [myList, setMyList] = useState([
-    //     {id:1, title:"text1", brief:"text1text1text1"},
-    //     {id:2, title:"text2", brief:"text2text1text1"},
-    //     {id:3, title:"text3", brief:"text3text1text1"},
-    //     {id:4, title:"text4", brief:"text4text1text1"}
-    // ])
-
 
     return (
         <div className="blog">
@@ -40,7 +34,7 @@ const Blog = (list) => {
 
 Blog.getInitialProps = async () => {
     const promise = new Promise((resolve)=>{
-        axios('http://127.0.0.1:7002/default/getArticleList').then(
+        axios(servicePath.getArticleList).then(
             (res)=>{
                 resolve(res.data)
             }

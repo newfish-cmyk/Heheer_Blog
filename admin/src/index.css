@@ -1,3 +1,79 @@
-body {
-    
+.login{
+    width: 400px;
+    margin: auto;
+    padding-top: 200px
 }
+
+body {
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.markdown-content{
+    font-size:16px !important;
+    max-height: 700px;
+}
+
+.show-html{
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius: 5px;
+    font-size:16px;
+    height: 700px;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+.show-html h1{
+    font-size:30px;
+}
+
+.show-html h2{
+    font-size:28px;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.show-html h3{
+    font-size:24px;
+}
+
+.show-html pre{
+    display: block;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.show-html pre>code{
+    color: #000;
+    background-color: #f0f0f0;
+}
+
+.show-html code {
+    background-color: #fff5f5;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0px 3px; 
+    color: #ff502c; 
+}
+
+.show-html blockquote{
+    border-left:4px solid #cbcbcb ;
+    padding: 10px 10px 10px 30px; 
+    background-color: #f8f8f8;
+}
+
+.article-list{
+    background-color: #ffffff;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius: 5px;
+    max-height: 700px;
+    overflow-y:auto
+}
+
+/* .date-select{
+    margin-top:10px;
+} */

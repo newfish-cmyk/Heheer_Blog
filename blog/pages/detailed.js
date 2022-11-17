@@ -6,6 +6,7 @@ import hljs from "highlight.js";
 import 'highlight.js/styles/monokai-sublime.css';
 
 import Header from "../components/Header";
+import servicePath from "../config/apiUrl";
 
 export default function Detailed(article) {
     let myMarked = require('marked')
@@ -44,7 +45,7 @@ export default function Detailed(article) {
 Detailed.getInitialProps = async(context)=>{
     let id = context.query.id
     const promise = new Promise((resolve)=>{
-        axios('http://127.0.0.1:7002/default/getArticlebyId/'+id).then(
+        axios(servicePath.getArticleById+id).then(
             (res)=>{
                 resolve(res.data.data[0])
             }
