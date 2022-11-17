@@ -1,0 +1,30 @@
+.article_title {
+    text-align: center;
+    justify-content: center;
+    color: #E5E9F1;
+}
+
+.article_content {
+    color: #E5E9F1;
+    margin: auto;
+    max-width: 900px;
+    word-wrap: break-word;
+}
+
+code {
+    display: inline-block ;
+    background-color:#f3f3f3;
+    border:1px solid #fdb9cc;
+    border-radius:3px;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color:#4f4f4f;
+    margin: 0px 3px;
+
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}

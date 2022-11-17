@@ -1,0 +1,22 @@
+.article_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    opacity: 1;
+}
+
+.list_item {
+    color: white;
+    background-color: #2C343C;
+    opacity: 0.75;
+    border: 1px solid #E5E9F1;
+}
+
+.list_item:hover {
+    opacity: 0.9;
+}
+
+
