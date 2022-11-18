@@ -30,6 +30,7 @@ export default function Adminindex() {
     const [markdownContent, setMarkdownContent] = useState('')
     const [articleId, setArticleId] = useState(0)
     const [articleTitle, setArticleTitle] = useState('')
+    const [articleBrief, setArticleBrief] = useState('')
     const [showData, setShowDate] = useState()
     const [list, setList] = useState([])
 
@@ -55,13 +56,17 @@ export default function Adminindex() {
         }else if(!showData){
             message.error('发布日期不能为空')
             return false
+        }else if(!articleBrief){
+            message.error('文章简介不能为空')
+            return false
         }
         let dataProps = {}
         dataProps.title = articleTitle
         dataProps.content = articleContent
+        dataProps.brief = articleBrief
         let datetext = showData.toString().replace('-','/')
         dataProps.addTime = (new Date(datetext).getTime())/1000
-        console.log(dataProps)
+        // console.log(dataProps)
         if(articleId===0){
             axios({
                 method:'post',
@@ -117,6 +122,7 @@ export default function Adminindex() {
                 res=>{
                     setArticleId(res.data.data[0].id)
                     setArticleTitle(res.data.data[0].title)
+                    setArticleBrief(res.data.data[0].brief)
                     setArticleContent(res.data.data[0].content)
                     let html=marked(res.data.data[0].content)
                     setMarkdownContent(html)
@@ -187,28 +193,35 @@ export default function Adminindex() {
                     <br/>
                     <Row>
                         <Col span={24}>
-                                <div className='article-list'>
-                                <List
-                                        itemLayout="vertical"
-                                        dataSource={list}
-                                        renderItem={item => (
-                                            <List.Item>
-                                                <Row>
-                                                    <Col span={20}>
-                                                        {item.title}
-                                                    </Col>
-                                                    <Col span={4}>
-                                                        <Row>
-                                                            <div ></div>
-                                                            <EditOutlined onClick={()=>{getArticleById(item.id)}}/> &nbsp;
-                                                            <DeleteOutlined onClick={()=>{delArticle(item.id)}}/>
-                                                        </Row>
-                                                    </Col>
-                                                </Row>
-                                            </List.Item>
-                                        )}
-                                    />
-                                </div>
+                            <TextArea
+                                value={articleBrief} 
+                                className="markdown-brief" 
+                                rows= {3} 
+                                onChange={e=>{setArticleBrief(e.target.value)}}
+                                placeholder="文章简介"
+                            />
+                            <div className='article-list'>
+                            <List
+                                    itemLayout="vertical"
+                                    dataSource={list}
+                                    renderItem={item => (
+                                        <List.Item>
+                                            <Row>
+                                                <Col span={20}>
+                                                    {item.title}
+                                                </Col>
+                                                <Col span={4}>
+                                                    <Row>
+                                                        <div ></div>
+                                                        <EditOutlined onClick={()=>{getArticleById(item.id)}}/> &nbsp;
+                                                        <DeleteOutlined onClick={()=>{delArticle(item.id)}}/>
+                                                    </Row>
+                                                </Col>
+                                            </Row>
+                                        </List.Item>
+                                    )}
+                                />
+                            </div>
                         </Col>
                     </Row>
                     
