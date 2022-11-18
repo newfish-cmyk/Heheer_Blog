@@ -2,6 +2,7 @@
     text-align: center;
     justify-content: center;
     color: #E5E9F1;
+    margin-bottom: -20px;
 }
 
 .article_content {
@@ -9,7 +10,7 @@
     margin: auto;
     max-width: 900px;
     word-wrap: break-word;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 150%;
 }
 
@@ -27,7 +28,8 @@ pre >code{
     border:0px !important;
     background-color: #273136 !important;
     color:#E5E9F1;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 120%;
 }
 code {
     display: inline-block ;
@@ -35,6 +37,7 @@ code {
     border-radius:3px;
     font-size: 16px;
     padding: 0 5px;
+    margin: 0 5px;
     color:#2a3033;
 }
 
@@ -42,12 +45,12 @@ h1 {
     font-size: 30px;
     font-weight: 600;
     color: #ced2d9;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 h2 {
     font-size: 28px;
-    margin: 10px 0;
+    margin: 18px 0;
 }
 
 p {

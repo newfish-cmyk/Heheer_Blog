@@ -8,8 +8,9 @@ export default function Home() {
     <>
       <title>Heheer's blog</title>
       <Header />
-      <div className='text-3xl text-gray-300 p-8'>
-        Hi, there 👋
+      <div className='text-xl text-gray-400 p-8'>
+        <p>👋 Hi, there! I'm heheer, a front-end enthusiast.</p>
+
       </div>
     </>
   )
