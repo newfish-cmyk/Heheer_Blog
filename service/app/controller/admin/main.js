@@ -8,7 +8,7 @@ class MainController extends Controller {
     const password = this.ctx.request.body.password;
 
     const res = await this.app.mysql.select('user',
-      { where: { userName: userName, password: password } },
+      { where: { userName, password } },
       { columns: [ 'userName' ] }
     );
 
@@ -16,7 +16,7 @@ class MainController extends Controller {
       // 登录成功,进行session缓存
       const openId = new Date().getTime();
       this.ctx.session.openId = openId;
-      this.ctx.body = { data: '登录成功', openId: openId };
+      this.ctx.body = { data: '登录成功', openId };
 
     } else {
       this.ctx.body = { data: '登录失败' };

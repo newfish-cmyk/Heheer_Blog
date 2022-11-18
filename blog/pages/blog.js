@@ -16,15 +16,14 @@ const Blog = (list) => {
             <div className="article_list">
                 {myList.map((item) => {
                     return (
-                        <div key={item.id}
-                            className="list_item 
-                            bg-white w-10/12 m-4 p-4 h-28 rounded-lg flex-row">
-                            {/* <Link href={{pathname:'/detailed'}}> */}
-                            <Link href={{pathname:'/detailed',query:{id:item.id}}}>
-                                <div className="title text-xl mb-2">{item.title}</div>
-                                <div className="brief text-sm">{item.brief}</div>
-                            </Link>
-                        </div>
+                        <Link href={{pathname:'/detailed',query:{id:item.id}}} 
+                        className="list_item bg-white w-10/12 m-4 p-4 h-36 rounded-lg flex-row font-mono">
+                            <div key={item.id}>
+                                    <div className="title text-2xl mb-2 ml-2 mt-1">{item.title}</div>
+                                    <div className="brief m-2">{item.brief}</div>
+                                    <div className="time m-2">{item.time}</div>
+                            </div>
+                        </Link>
                     )
                 })}
             </div>

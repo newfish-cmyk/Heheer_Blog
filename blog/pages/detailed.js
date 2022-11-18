@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import axios from 'axios'
-// import marked from 'marked'
 import hljs from "highlight.js";
 import 'highlight.js/styles/monokai-sublime.css';
 
@@ -34,7 +33,7 @@ export default function Detailed(article) {
                 <div className="article_title text-4xl m-4 p-4">{article.title}</div>
                 <div 
                     dangerouslySetInnerHTML={{__html:html}} 
-                    className="article_content p-4 w-10/12"
+                    className="article_content p-4"
                 > 
                 </div>
             </div>

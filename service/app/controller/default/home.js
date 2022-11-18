@@ -6,8 +6,10 @@ class HomeController extends Controller {
   async getArticleList() {
     const sql = 'SELECT article.id as id,' +
               'article.title as title,' +
-              'article.brief as brief ' +
-              'FROM article';
+              'article.brief as brief, ' +
+              'FROM_UNIXTIME(article.addtime,"%Y/%m/%d") as time ' +
+              'FROM article ' +
+              'ORDER BY addTime DESC';
 
     const result = await this.app.mysql.query(sql);
 
