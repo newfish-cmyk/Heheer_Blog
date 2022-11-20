@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "../components/Header";
-import Photos from "../components/Photo"
+import Photo from "../components/Photo"
 
 export default function Photos() {
     return (
@@ -9,7 +9,7 @@ export default function Photos() {
             <Header />
             <div className="text-white text-4xl">
                 <div>
-                    <Photos />
+                    <Photo />
                 </div>
             </div>
         </div>

@@ -1,0 +1,25 @@
+.project_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project_item {
+    color: white;
+    background-color: #2C343C;
+    opacity: 0.85;
+    border: 1px solid 	#c2c5cc;
+    max-width: 450px;
+}
+
+.project_item:hover {
+    opacity: 0.95;
+}
+
+.project_intro {
+    opacity: 0.7;
+}
+
+/* .tech_stack {
+    line-height: 1;
+} */
