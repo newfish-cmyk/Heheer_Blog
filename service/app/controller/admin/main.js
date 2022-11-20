@@ -32,7 +32,7 @@ class MainController extends Controller {
 
     this.ctx.body = {
       isSuccess: insertSuccess,
-      insertId: insertId
+      insertId: insertId,
     };
   }
 

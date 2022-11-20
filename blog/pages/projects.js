@@ -59,7 +59,7 @@ export default function Projects() {
             <Link
               key={item.id}
               href={item.href}
-              className="project_item w-9/12 m-4 p-4 h-48 rounded-lg flex-row font-mono"
+              className="project_item w-11/12 m-4 p-4 h-48 rounded-lg flex-row font-mono"
             >
               <div className="project_title text-2xl mb-2 ml-2 mt-1">
                 {item.title}
