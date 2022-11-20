@@ -31,7 +31,7 @@ export default function Projects() {
       tech_stack:
         "· 前台：Next.js + Tailwind\n\n" +
         "· 中台：egg.js\n\n" +
-        "· 后台：React hooks + ant design",
+        "· 后台：React + ant design",
     },
     {
       id: 2,
@@ -39,7 +39,8 @@ export default function Projects() {
       intro: "学习前端时写的一些小项目",
       href: "https://github.com/newfish-cmyk/FrontEnd_Learning_project",
       tech_stack:
-        "· HTML + CSS + JavaScript\n\n" + " · React Basic & React Advanced",
+        "· HTML + CSS + JavaScript\n\n" + 
+        "· React Basic & React Advanced",
     },
     {
       id: 3,
