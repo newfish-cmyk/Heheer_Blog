@@ -1,15 +1,15 @@
 import React from "react";
-// import Head from 'next/head'
-
 import Header from "../components/Header";
 
 export default function Home() {
+
   return (
     <>
       <title>Heheer's blog</title>
       <Header />
-      <div className="text-xl text-gray-400 p-4 px-12">
-        <p>👋 Hi, there! I'm heheer, a front-end enthusiast.</p>
+      <div className="font-mono text-gray-200 text-4xl font-black flex-column w-1/2 m-auto pt-32">
+        <p className="pb-12">Hi, there! 👋 </p>
+        <p>I'm heheer, a front-end beginner.</p>
       </div>
     </>
   );

@@ -66,7 +66,6 @@ export default function Adminindex() {
     dataProps.brief = articleBrief;
     let datetext = showData.toString().replace("-", "/");
     dataProps.addTime = new Date(datetext).getTime() / 1000;
-    // console.log(dataProps)
     if (articleId === 0) {
       axios({
         method: "post",
@@ -77,7 +76,6 @@ export default function Adminindex() {
         setArticleId(res.data.insertId);
         console.log(res);
         if (res.data.data === "没有登录") {
-          localStorage.removeItem("openId");
           navigate("/");
         } else if (res.data.isSuccess) {
           message.success("文章发布成功");
@@ -102,8 +100,8 @@ export default function Adminindex() {
   const delArticle = (id) => {
     axios(servicePath.delArticle + id, { withCredentials: true }).then(
       (res) => {
-        message.success("文章删除成功");
-        getList();
+          message.success("文章删除成功");
+          getList();
       }
     );
   };
