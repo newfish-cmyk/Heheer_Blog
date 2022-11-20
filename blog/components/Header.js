@@ -2,7 +2,9 @@ import React from "react";
 
 export default function Header() {
   return (
-    <ul className="header flex font-mono text-2xl">
+    <div>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      <ul className="header flex font-mono text-l sm:text-2xl">
       <li className="items ml-8 my-4">
         <a href="/">HOME</a>
       </li>
@@ -19,5 +21,7 @@ export default function Header() {
         <a href="#">LOGIN</a>
       </li>
     </ul>
+    </div>
+    
   );
 }

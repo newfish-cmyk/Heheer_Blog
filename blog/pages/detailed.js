@@ -30,7 +30,7 @@ export default function Detailed(article) {
       <title>{article.title}</title>
       <Header />
       <div className="content font-mono">
-        <div className="article_title text-4xl m-4 p-4">{article.title}</div>
+        <div className="article_title text-2xl m-4 p-4 sm:text-4xl">{article.title}</div>
         <div
           dangerouslySetInnerHTML={{ __html: html }}
           className="article_content p-4"

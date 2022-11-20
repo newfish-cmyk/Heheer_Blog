@@ -54,13 +54,13 @@ export default function Projects() {
   return (
     <div>
       <Header />
-      <div className="project_list p-4">
+      <div className="project_list px-0 py-4 sm:p-4">
         {project_list.map((item) => {
           return (
             <Link
               key={item.id}
               href={item.href}
-              className="project_item w-11/12 m-4 p-4 h-48 rounded-lg flex-row font-mono"
+              className="project_item w-11/12 m-4 px-2 py-2 h-44 rounded-lg flex-row font-mono sm:p-4 h-48"
             >
               <div className="project_title text-2xl mb-2 ml-2 mt-1">
                 {item.title}
