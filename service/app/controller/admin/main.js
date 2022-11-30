@@ -32,7 +32,7 @@ class MainController extends Controller {
 
     this.ctx.body = {
       isSuccess: insertSuccess,
-      insertId: insertId,
+      insertId,
     };
   }
 
@@ -42,20 +42,20 @@ class MainController extends Controller {
                 'FROM article ' +
                 'ORDER BY addTime ASC';
 
-    const resList = await this.app.mysql.query(sql)
+    const resList = await this.app.mysql.query(sql);
     this.ctx.body = { list: resList };
   }
 
   async delArticle() {
-    let id = this.ctx.params.id;
-    const res = await this.app.mysql.delete('article', {'id': id})
+    const id = this.ctx.params.id;
+    const res = await this.app.mysql.delete('article', { id });
     this.ctx.body = { data: res };
   }
 
   async getArticleById() {
     const id = this.ctx.params.id;
     const result = await this.app.mysql.select('article',
-      { where: { id: id } }
+      { where: { id } }
     );
 
     this.ctx.body = { data: result };
