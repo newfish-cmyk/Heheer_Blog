@@ -11,6 +11,7 @@ export default function Home() {
         <p className="pb-12">Hi, there! 👋 </p>
         <p>I'm heheer, a front-end beginner.</p>
       </div>
+      <a className="filing font-mono" href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2022034507号</a>
     </>
   );
 }

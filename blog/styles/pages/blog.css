@@ -18,3 +18,10 @@
 .brief {
   opacity: 0.7;
 }
+
+.title,
+.brief {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
