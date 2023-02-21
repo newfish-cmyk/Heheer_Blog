@@ -3,6 +3,63 @@ body {
   width: 100%;
 }
 
+.welcome {
+  display: flex;
+  justify-content: center;
+  margin-top: 130px;
+}
+
+#Mysvg {
+  stroke-linecap: round;
+}
+
+#p1 {
+  stroke-dasharray: 595;
+  stroke-dashoffset: 595;
+  animation: draw 1.3s linear 0s forwards;
+}
+#p2 {
+  stroke-dasharray: 304;
+  stroke-dashoffset: 304;
+  animation: draw 1.5s linear 0s forwards;
+}
+#p3 {
+  stroke-dasharray: 201;
+  stroke-dashoffset: 201;
+  animation: draw 1s linear 1.4s forwards;
+}
+#p4 {
+  stroke-dasharray: 286;
+  stroke-dashoffset: 286;
+  animation: draw 1s linear 1.4s forwards;
+}
+#p5 {
+  stroke-dasharray: 257;
+  stroke-dashoffset: 257;
+  animation: draw 1s linear 1.4s forwards;
+}
+#p6 {
+  stroke-dasharray: 157;
+  stroke-dashoffset: 157;
+  animation: draw 1s linear 1.4s forwards;
+}
+#p7 {
+  stroke-dasharray: 257;
+  stroke-dashoffset: 257;
+  animation: draw 1s linear 1.4s forwards;
+}
+#p8 {
+  stroke-dasharray: 167;
+  stroke-dashoffset: 167;
+  animation: draw 1s linear 1.4s forwards;
+}
+
+@keyframes draw {
+  to {
+      stroke-dashoffset: 0;
+  }
+}
+
 .filing {
   color:white;
   position: fixed;
