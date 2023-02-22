@@ -54,23 +54,24 @@ export default function Projects() {
   return (
     <div>
       <Header />
-      <div className="project_list px-0 py-4 sm:p-4">
+      <div className="project_list px-0 py-4 sm:p-6">
         {project_list.map((item) => {
           return (
             <Link
               key={item.id}
               href={item.href}
-              className="project_item w-11/12 m-4 px-2 py-2 h-44 rounded-lg flex-row font-mono sm:p-4 h-48"
+              className="project_item font-mono flex-row mx-6 my-4 sm:my-16 "
             >
-              <div className="project_title text-2xl mb-2 ml-2 mt-1">
+              <div className="project_title text-2xl mb-2 ml-2 flex">
+                <img src="../gear.png" className="gear mr-2"></img>
                 {item.title}
               </div>
-              <div className="project_intro m-2">{item.intro}</div>
+              <div className="project_intro m-2 ml-12">{item.intro}</div>
               <div
                 dangerouslySetInnerHTML={{
                   __html: myMarked.marked(item.tech_stack),
                 }}
-                className="tech_stack leading-none"
+                className="tech_stack leading-none ml-4"
               ></div>
             </Link>
           );
