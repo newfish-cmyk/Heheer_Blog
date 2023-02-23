@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer"
 
 export default function Home() {
 
   return (
     <>
-      <title>Heheer's blog</title>
+      <title>Heheer</title>
       <Header />
-      <div className="welcome">
+      <div className="welcome mt-8">
         <svg id= "Mysvg" width="285" height="271" viewBox="0 0 285 271" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path id="p1" d="M79.12 121V73.624H36.616V121H13.432V6.76H36.616V53.464H79.12V6.76H102.304V121H79.12Z" stroke="white" strokeWidth="5"/>
           <path id="p2" d="M138.551 121V37H161.063V121H138.551ZM138.551 26.248V3.39999H161.063V26.248H138.551Z" stroke="white" strokeWidth="5"/>
@@ -18,8 +19,25 @@ export default function Home() {
           <path id="p7" d="M220.919 248.472C220.983 251.416 221.752 253.56 223.224 254.904C224.76 256.184 226.935 256.824 229.751 256.824C235.703 256.824 241.016 256.632 245.688 256.248L248.376 255.96L248.568 265.464C241.208 267.256 234.552 268.152 228.6 268.152C221.368 268.152 216.119 266.232 212.855 262.392C209.591 258.552 207.96 252.312 207.96 243.672C207.96 226.456 215.032 217.848 229.176 217.848C243.128 217.848 250.104 225.08 250.104 239.544L249.144 248.472H220.919ZM237.432 238.68C237.432 234.84 236.824 232.184 235.608 230.712C234.392 229.176 232.248 228.408 229.176 228.408C226.168 228.408 224.023 229.208 222.743 230.808C221.527 232.344 220.888 234.968 220.824 238.68H237.432Z" stroke="white" strokeWidth="4"/>
           <path id="p8" d="M267.553 267V251.544H281.377V267H267.553ZM268.801 243L267.553 201.72H281.473L280.129 243H268.801Z" stroke="white" strokeWidth="4"/>
         </svg> 
+        <div id="selfIntro" className="text-base my-12 pt-8 mx-4">
+          <text>I'm heheer, a frontend beginner.</text>
+          <text className="flex mt-2">
+            Learning
+            <img src="../javascript.png" className="w-6 h-6 ml-2 mr-1"></img>
+            <img src="../react.png" className="w-6 h-6 ml-2 mr-1"></img>
+            <img src="../webpack.png" className="w-6 h-6 ml-2 mr-1"></img>
+            <img src="../nodejs.png" className="w-6 h-6 ml-2 mr-1"></img>
+            and so on.
+          </text>
+          <text className="flex mt-2">
+            Find me on
+            <a href="https://juejin.cn/user/629346520272984"><img src="../juejin.png" className="w-6 h-6 ml-2 mr-1"></img></a>
+            <a href="https://www.yuque.com/zhangyuge-vkorl"><img src="../yuque.png" className="w-6 h-6 ml-2 mr-1"></img></a>
+            <a href="https://github.com/newfish-cmyk"><img src="../github.png" className="w-6 h-6 ml-2 mr-1"></img></a>
+          </text>
+        </div>
+        <Footer />
       </div>
-      <a className="filing font-mono" href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2022034507号</a>
     </>
   );
 }

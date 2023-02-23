@@ -7,5 +7,6 @@ import "../styles/pages/detailed.css";
 import "../styles/pages/projects.css";
 
 import "../styles/components/header.css";
+import "../styles/components/footer.css"
 
 export default App;

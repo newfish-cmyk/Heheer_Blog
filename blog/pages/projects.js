@@ -1,6 +1,7 @@
 import React from "react";
 
 import Header from "../components/Header";
+// import Footer from "../components/Footer"
 import Link from "next/link";
 
 import hljs from "highlight.js";
@@ -54,13 +55,15 @@ export default function Projects() {
   return (
     <div>
       <Header />
-      <div className="project_list px-0 py-4 sm:p-6">
+      <title>Heheer's PROJECTS</title>
+      <div className="projects">
+      <div className="project_list px-0 py-4 sm:pl-12 sm:py-8">
         {project_list.map((item) => {
           return (
             <Link
               key={item.id}
               href={item.href}
-              className="project_item font-mono flex-row mx-6 my-4 sm:my-16 "
+              className="project_item font-mono flex-row mx-6 my-2 py-2 "
             >
               <div className="project_title text-2xl mb-2 ml-2 flex">
                 <img src="../gear.png" className="gear mr-2"></img>
@@ -77,6 +80,11 @@ export default function Projects() {
           );
         })}
       </div>
+      <div>
+        <img src="../ship.svg" className="ship hidden md:flex"></img>
+      </div>
+      </div>
+      {/* <Footer /> */}
     </div>
   );
 }

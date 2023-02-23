@@ -1,0 +1,15 @@
+.filing {
+    color:white;
+    opacity: 50%;
+    /* position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 60px; */
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+  

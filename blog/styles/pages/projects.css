@@ -1,16 +1,17 @@
 .project_list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   margin: auto;
 }
 
 .project_item {
   color: white;
   /* background-color: #2c343c; */
-  opacity: 0.7;
+  opacity: 0.8;
   /* border: 1px solid #c2c5cc; */
-  max-width: 80%;
+  max-width: 85vw;
+  width: 26rem;
+  z-index: 99;
 }
 
 .project_item:hover {
@@ -31,4 +32,17 @@
 .gear {
   width: 2rem;
   height: 2rem;
+}
+
+.ship {
+  opacity: 30%;
+  padding-right: 7rem;
+  width: 800px;
+  height: 500px;
+  margin-left: -300px;
+}
+
+.projects {
+  display: flex;
+  /* justify-content: space-between; */
 }

@@ -5,6 +5,7 @@ import hljs from "highlight.js";
 import "highlight.js/styles/monokai-sublime.css";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer"
 import servicePath from "../config/apiUrl";
 
 export default function Detailed(article) {
@@ -36,6 +37,7 @@ export default function Detailed(article) {
           className="article_content p-4"
         ></div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -5,8 +5,14 @@ body {
 
 .welcome {
   display: flex;
-  justify-content: center;
-  margin-top: 130px;
+  align-items: center;
+  flex-direction: column;
+}
+
+#selfIntro {
+  color: #e5e9f1;
+  opacity: 80%;
+  word-wrap: break-word;
 }
 
 #Mysvg {
@@ -58,12 +64,4 @@ body {
   to {
       stroke-dashoffset: 0;
   }
-}
-
-.filing {
-  color:white;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  margin: 100px;
 }
