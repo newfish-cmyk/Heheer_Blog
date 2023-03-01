@@ -2,7 +2,7 @@
 
 一个前端初学者的前后端练手项目，结构简单，逻辑清晰，适合练习。
 
-DEMO: http://www.heheer.top/
+DEMO: http://heheer.top/
 
 ## 🍭 Tech Stack
 - 前台：Next.js + Tailwind
