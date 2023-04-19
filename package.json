@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "husky": "^8.0.3"
+  },
+
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo \"[Husky] pre-commit\""
+    }
+  }
+}
